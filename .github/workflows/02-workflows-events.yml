@@ -1,6 +1,12 @@
 name: 02-workflows-events
 
-on: push 
+on: 
+    push:
+    pull_request:
+    schedule:
+        - cron: '*/5 * * * *' # Runs every 5 minutes
+          
+    workflow_dispatch: # Allows manual triggering of the workflow from the GitHub UI
 
 jobs:
     echo-hello:
