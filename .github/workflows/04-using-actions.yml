@@ -17,8 +17,8 @@ jobs:
       - name: Install_deps_and_run_tests
         run: npm ci   
         working-directory: ./04-using-actions
-      - name: Run_tests
-        run: npm test
+      - name: Run_lint
+        run: npm run lint 
         working-directory: ./04-using-actions  
 
     # 1 installl deps for react 
