@@ -16,6 +16,7 @@ jobs:
           node-version: 20
       - name: Install_deps_and_run_tests
         run: npm ci   
+        working-directory: ./04-using-actions
 
     # 1 installl deps for react 
 
