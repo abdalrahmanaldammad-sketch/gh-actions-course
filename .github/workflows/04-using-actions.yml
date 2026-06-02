@@ -5,7 +5,9 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-latest 
-    
+    defaults:
+      run:     
+       working-directory: ./04-using-actions
     # 0 check out the code from the repository
     steps:
       - name: Checkout_code
@@ -16,10 +18,8 @@ jobs:
           node-version: 20
       - name: Install_deps_and_run_tests
         run: npm ci   
-        working-directory: ./04-using-actions
       - name: Run_lint
         run: npm run lint 
-        working-directory: ./04-using-actions  
 
     # 1 installl deps for react 
 
