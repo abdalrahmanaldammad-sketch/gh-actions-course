@@ -6,13 +6,16 @@ jobs:
   build:
     runs-on: ubuntu-latest 
     
-    #0 check out the code from the repository 
+    # 0 check out the code from the repository
     steps:
-      - name: Check out code 
+      - name: Checkout_code
         uses: actions/checkout@v4
-      - name: printing folders 
-        run: ls -al 
-
+      - name: Setup_Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: Install_deps_and_run_tests
+        run: npm ci   
 
     # 1 installl deps for react 
 
