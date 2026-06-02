@@ -1,0 +1,12 @@
+name: 05-2-Evntt filters - Activity type
+
+on:
+    pull_request: 
+        types: [closed]
+        branches: [main]
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: say hello 
+              run: echo  "running whenever pull request is closed and base branch is main"
