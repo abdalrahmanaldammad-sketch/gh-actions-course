@@ -1,0 +1,12 @@
+name : 05-1-filters-activity-type
+
+on:
+    pull_request: 
+        types: [opened, synchronize, reopened]
+        branches: [main]
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: say hello
+              run: echo  "running whenever pull request is opened, synchronize or reopened And base branch is main"
